@@ -1,21 +1,25 @@
 import React from 'react';
 import './App.css';
+import InputField from './components/InputField'
 
-let name: string;
-let age: number | string;
-let isStudent: boolean;
-let hobbies: number[];
-let role: [number, string]
-
-let printName: (name:string) => void;
+//  
 
 //void returns undefined
 //never doesnt return anything
 
-type Person = {
-  name:string;
-  age?: number  //question mark makes age optional
-}
+// type Person = {
+//   name:string;
+//   age?: number  //question mark makes age optional
+// }
+
+// type X = {
+//   a: string;
+//   b: number;
+// }
+
+// interface Person extends X{ //properties of X inside Person
+//   age?: number  //question mark makes age optional
+// }
 
 // let person: Person = {
 //   name: "Vivian"
@@ -24,10 +28,11 @@ type Person = {
 
 // let lotsOfPeople: Person[];
 
-function App() {
+const App: React.FC = () => { //React Functional Component
   return (
     <div className="App">
-      Hello World
+      <span className="heading">Taskify</span>
+      <InputField />
     </div>
   );
 }
